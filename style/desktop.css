@@ -3,25 +3,41 @@ main
     margin: 0 15px;
 }
 
-main > .client-info,
+main > .client,
 main > .payment,
 main > .company-info
 {
     padding: 20px;
 }
 
-main > .client-info > img
+main > .client > img
 {
     float: right;
     height: 150px;
-    margin: 0 15px;
-    border: 1px solid lightgrey;
+    margin: 0 15px 15px;
+    /*border: 1px solid lightgrey;*/
     /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
 }
 
-main > .client-info > h3
+main > .client > h3
 {
     margin: 0;
+}
+
+.client .client-info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.client .contacts > a
+{
+    margin-right: 15px;
+}
+
+.client .client-info a:last-child
+{
+    padding: 15px 0;
 }
 
 .payment
