@@ -1,2 +1,2 @@
-#SolodBank
+# SolodBank
 Банк для студентов

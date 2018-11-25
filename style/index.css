@@ -123,10 +123,3 @@ a:visited
 {
     color: #ffa3b4;
 }
-
-.payment input[type='text']:focus,
-.payment input[type='email']:focus
-{
-    border: none;
-    background-color: lightpink;
-}

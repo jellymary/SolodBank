@@ -52,6 +52,7 @@ main > .client > h3
 {
     border: none;
     border-bottom: 2px solid lightgrey;
+    max-width: 500px;
 }
 
 .payment > label,
@@ -110,7 +111,6 @@ main > .client > h3
 .any-bank .credit-card
 {
     grid-row: span 5;
-    /*border: 2px solid black;*/
     background-color: #f9f9f9;
     border-radius: 15px;
     box-shadow: 5px  5px 25px rgba(0,0,0,0.3);
@@ -147,6 +147,33 @@ main > .client > h3
     grid-area: cvc;
 }
 
+.payment .own-bank form .fields,
+.payment .get-payment form .fields
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    padding-bottom: 30px;
+}
+
+.get-payment .fields a
+{
+    grid-column: span 2;
+}
+
+.nds-fields label
+{
+    padding: 7px 10px;
+    border: 2px solid white;
+}
+
+.nds-fields input.nds18:checked ~ label.nds18,
+.nds-fields input.nds10:checked ~ label.nds10,
+.nds-fields input.without-nds:checked ~ label.without-nds
+{
+    border: 2px solid lightgray;
+}
+
 .company-info .services
 {
     display: grid;
@@ -165,5 +192,6 @@ main > .client > h3
 
 .service img
 {
+    /*width: 100%;*/
     height: 50%;
 }

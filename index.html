@@ -50,7 +50,7 @@
                         <input id="cvc" type="text" placeholder="CVC" pattern="[0-9]{3}" required>
                     </div>
                     <label for="sum">Сумма</label>
-                    <input id="sum" type="text" placeholder="от 1000 до 75000&#x20bd;" required>
+                    <input id="sum" type="text" placeholder="от 1000 до 75000&#x20bd;" pattern="[0-9]*" required>
                     <label for="comment">Комментарий</label>
                     <input id="comment" type="text" placeholder="До 150 символов">
                     <label for="email">Ваша эл.почта</label>
@@ -61,14 +61,27 @@
             <section class="own-bank">
                 <p>Сформируйте платёжку и загрузите её в свой банк для подписи</p>
                 <form>
-                    <label>От кого<input type="text" placeholder="ИНН или название плательщика" required></label>
-                    <label>БИК<input type="text" required></label>
-                    <label>Номер счёта<input type="text" placeholder="" required></label>
-                    <label>За что<input type="text" placeholder="Наименование платежа" required></label>
-                    <label><input type="radio" name="nds">НДС 18%</label>
-                    <label><input type="radio" name="nds">НДС 10%</label>
-                    <label><input type="radio" name="nds">без НДС</label>
-                    <label>Сколько<input type="text" placeholder="Сумма запроса" required></label>
+                    <div class="fields">
+                        <label for="inn__own-bank">От кого</label>
+                        <input id="inn__own-bank" type="text" placeholder="ИНН или название плательщика" required>
+                        <label for="bik__own-bank">БИК</label>
+                        <input id="bik__own-bank" type="text" required>
+                        <label for="account__own-bank">Номер счёта</label>
+                        <input id="account__own-bank" type="text" placeholder="" required>
+                        <label for="reason__own-bank">За что</label>
+                        <input id="reason__own-bank" type="text" placeholder="Наименование платежа" required>
+                        <label>НДС</label>
+                        <div class="nds-fields">
+                            <input id="nds18__own-bank" type="radio" name="nds" class="nds18">
+                            <label for="nds18__own-bank" class="nds18">НДС 18%</label>
+                            <input id="nds10__own-bank" type="radio" name="nds" class="nds10">
+                            <label for="nds10__own-bank" class="nds10">НДС 10%</label>
+                            <input id="without-nds__own-bank" type="radio" name="nds" class="without-nds">
+                            <label for="without-nds__own-bank" class="without-nds">без НДС</label>
+                        </div>
+                        <label for="amount__own-bank">Сколько</label>
+                        <input id="amount__own-bank" type="text" placeholder="Сумма запроса" required>
+                    </div>
                     <button type="submit">Получить файл для интерент-банка</button>
                     <button type="reset">Очистить форму</button>
                 </form>
@@ -80,17 +93,32 @@
                 подпишет её у себя в интернет-банке
             </p>
             <form>
-                <label>ИНН получателя<input type="text" placeholder="ИНН или название получателя" required></label>
-                <label>БИК<input type="text" required></label>
-                <label>Номер счёта<input type="text" placeholder="" required></label>
-                <label>За что<input type="text" placeholder="Наименование платежа" required></label>
-                <label><input type="radio" name="nds">НДС 18%</label>
-                <label><input type="radio" name="nds">НДС 10%</label>
-                <label><input type="radio" name="nds">без НДС</label>
-                <label>Сколько<input type="text" placeholder="Сумма запроса" required></label>
-                <label>Номер телефона<input type="text" placeholder="+7" required></label>
-                <a href="#">Оставляя телефон, вы соглашаетесь на обработку персональных данных</a>
-                <label>Ваша эл.почта<input type="email" placeholder="Для уведомления об оплате" required></label>
+                <div class="fields">
+                    <label for="inn__get-payment">ИНН получателя</label>
+                    <input id="inn__get-payment" type="text" placeholder="ИНН или название получателя" required>
+                    <label for="bik__get-payment">БИК</label>
+                    <input id="bik__get-payment" type="text" required>
+                    <label for="account__get-payment">Номер счёта</label>
+                    <input id="account__get-payment" type="text" placeholder="" required>
+                    <label for="reason__get-payment">За что</label>
+                    <input id="reason__get-payment" type="text" placeholder="Наименование платежа" required>
+                    <label>НДС</label>
+                    <div class="nds-fields">
+                        <input id="nds18__get-payment" type="radio" name="nds" class="nds18">
+                        <label for="nds18__get-payment" class="nds18">НДС 18%</label>
+                        <input id="nds10__get-payment" type="radio" name="nds" class="nds10">
+                        <label for="nds10__get-payment" class="nds10">НДС 10%</label>
+                        <input id="without-nds__get-payment" type="radio" name="nds" class="without-nds">
+                        <label for="without-nds__get-payment" class="without-nds">без НДС</label>
+                    </div>
+                    <label for="amount__get-payment">Сколько</label>
+                    <input id="amount__get-payment" type="text" placeholder="Сумма запроса" required>
+                    <label for="phone__get-payment">Номер телефона</label>
+                    <input id="phone__get-payment" type="text" placeholder="+7" required>
+                    <a href="#">Оставляя телефон, вы соглашаетесь на обработку персональных данных</a>
+                    <label for="email__get-payment">Ваша эл.почта</label>
+                    <input id="email__get-payment" type="email" placeholder="Для уведомления об оплате" required>
+                </div>
                 <button type="submit">Создать платёж</button>
                 <button type="reset">Очистить форму</button>
             </form>
