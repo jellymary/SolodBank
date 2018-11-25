@@ -1,0 +1,110 @@
+main
+{
+    margin: 0 15px;
+}
+
+main > .client-info,
+main > .payment,
+main > .company-info
+{
+    padding: 20px;
+}
+
+main > .client-info > img
+{
+    float: right;
+    height: 150px;
+    margin: 0 15px;
+    border: 1px solid lightgrey;
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+}
+
+main > .client-info > h3
+{
+    margin: 0;
+}
+
+.payment
+{
+    clear: right;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+}
+
+.payment input[type='text'],
+.payment input[type='email']
+{
+    border:none;
+    border-bottom: 2px solid lightgrey;
+}
+
+.payment > label,
+.payment .pay > label
+{
+    color: #3b93be;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.payment .pay > label
+{
+    font-size: 85%;
+    padding: 5px;
+}
+
+.payment input[type='radio'],
+.payment input#pay:checked ~ .get-payment,
+.payment input#get-payment:checked ~ .pay,
+.payment > .pay > input#any-bank:checked ~ .own-bank,
+.payment > .pay > input#own-bank:checked ~ .any-bank
+{
+    display: none;
+}
+
+.payment > input#pay:checked ~ label[for='pay'],
+.payment > input#get-payment:checked ~ label[for='get-payment']
+{
+    color: black;
+}
+
+.payment .pay > input#any-bank:checked ~ label[for='any-bank'],
+.payment .pay > input#own-bank:checked ~ label[for='own-bank']
+{
+    color: black;
+    background: rgba(241, 241, 241, 0.5);
+}
+
+.payment > .pay,
+.payment > .get-payment,
+.payment > .pay > .any-bank,
+.payment > .pay > .own-bank
+{
+    margin-top: 15px;
+}
+
+footer
+{
+    background: lightgreen;
+}
+
+.company-info .services
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.company-info .service
+{
+    padding: 15px;
+    border: 2px solid lightgrey;
+    height: 250px;
+    /*display: grid;*/
+    /*grid-template: 'image';*/
+}
+
+.service img
+{
+    height: 50%;
+}

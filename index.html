@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Платёж - SolodBank</title>
+    <link rel="stylesheet" href="style/index.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="style/desktop.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="style/tablet.css" type="text/css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>SolodBank</h1>
+        <h5 class="slogan">Банк для студентов</h5>
+    </div>
+    <h2>Осуществить платёж</h2>
+</header>
+<main>
+    <section class="client-info">
+        <img id="client-photo" src="images/client-logo.jpg" alt="Фото/логотип клиента">
+        <h3>
+            <span class="ip-name">Индивидуалный предприниматель</span>
+            <span class="client-name">Швецова Мария Валерьевна</span>
+        </h3>
+        <section class="contacts">
+            <a href="tel:+79221112233">+79221112233</a>
+            <a href="http://www.mary.com">www.mary.com</a>
+            <a href="mailto:mary@tochka.com">mary@tochka.com</a>
+        </section>
+        <a href="#">Информация о компании</a>
+        <a href="#">Показать реквизиты</a>
+    </section>
+    <section class="payment">
+        <input type="radio" id="pay" name="payment-operation" checked>
+        <input type="radio" id="get-payment" name="payment-operation">
+        <label for="pay">Заплатить</label>
+        <label for="get-payment">Запросить платёж</label>
+        <section class="pay">
+            <input type="radio" id="any-bank" name="bank-type" checked>
+            <input type="radio" id="own-bank" name="bank-type">
+            <label for="any-bank">С карты любого банка</label>
+            <label for="own-bank">Из своего интернет-банка</label>
+            <section class="any-bank">
+                <form>
+                    <div class="credit-card">
+                        <input type="text" placeholder="Номер карты" pattern="[0-9]{16}" required>
+                        <input type="text" placeholder="ММ/ГГ" required>
+                        <input type="text" placeholder="CVC" pattern="[0-9]{3}" required>
+                    </div>
+                    <label>Сумма<input type="text" placeholder="от 1000 до 75000&#x20bd;" required></label>
+                    <label>Комментарий<input type="text" placeholder="До 150 символов"></label>
+                    <label>Ваша эл.почта<input type="email" placeholder="Для квитанции об оплате" required></label>
+                    <button type="submit">Заплатить</button>
+                </form>
+            </section>
+            <section class="own-bank">
+                <p>Сформируйте платёжку и загрузите её в свой банк для подписи</p>
+                <form>
+                    <label>От кого<input type="text" placeholder="ИНН или название плательщика" required></label>
+                    <label>БИК<input type="text" required></label>
+                    <label>Номер счёта<input type="text" placeholder="" required></label>
+                    <label>За что<input type="text" placeholder="Наименование платежа" required></label>
+                    <label><input type="radio" name="nds">НДС 18%</label>
+                    <label><input type="radio" name="nds">НДС 10%</label>
+                    <label><input type="radio" name="nds">без НДС</label>
+                    <label>Сколько<input type="text" placeholder="Сумма запроса" required></label>
+                    <button type="submit">Получить файл для интерент-банка</button>
+                    <button type="reset">Очистить форму</button>
+                </form>
+            </section>
+        </section>
+        <section class="get-payment">
+            <p>
+                Создайте платёжку, а <span>Индивидуальный предприниматель Швецова Мария Валерьевна</span>
+                подпишет её у себя в интернет-банке
+            </p>
+            <form>
+                <label>ИНН получателя<input type="text" placeholder="ИНН или название получателя" required></label>
+                <label>БИК<input type="text" required></label>
+                <label>Номер счёта<input type="text" placeholder="" required></label>
+                <label>За что<input type="text" placeholder="Наименование платежа" required></label>
+                <label><input type="radio" name="nds">НДС 18%</label>
+                <label><input type="radio" name="nds">НДС 10%</label>
+                <label><input type="radio" name="nds">без НДС</label>
+                <label>Сколько<input type="text" placeholder="Сумма запроса" required></label>
+                <label>Номер телефона<input type="text" placeholder="+7" required></label>
+                <a href="#">Оставляя телефон, вы соглашаетесь на обработку персональных данных</a>
+                <label>Ваша эл.почта<input type="email" placeholder="Для уведомления об оплате" required></label>
+                <button type="submit">Создать платёж</button>
+                <button type="reset">Очистить форму</button>
+            </form>
+        </section>
+    </section>
+    <section class="company-info">
+        <p>О компании <span>Индивидуальный предприниматель Швецова Мария Валерьевна</span></p>
+        <section class="services">
+            <div class="service">
+                <img src="images/markup.jpg" alt="markup">
+                    <h3>Вёрстка сайта</h3>
+                <p class="price">за еду</p>
+            </div>
+            <div class="service">
+                <img src="images/client-side.jpg" alt="client-side">
+                <h3>Клиентская часть сайта</h3>
+                <p class="price">от 15000 руб.</p>
+            </div>
+            <div class="service">
+                <img src="images/server-side.jpg" alt="server-side">
+                <h3>Серверная часть сайта</h3>
+                <p class="price">1000 р/час</p>
+            </div>
+        </section>
+    </section>
+</main>
+<footer>
+    Контакты
+</footer>
+</body>
+</html>
